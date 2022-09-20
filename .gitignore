@@ -1,2 +1,37 @@
+<<<<<<< HEAD
+=======
+# .DS_Store
+# .env*
+# .flaskenv
+# *.pyc
+# *.pyo
+# env/
+# env*
+# dist/
+# build/
+# *.egg
+# *.egg-info/
+# _mailinglist
+# .tox/
+# .cache/
+# .pytest_cache/
+# .idea/
+# docs/_build/
+>>>>>>> 6f339f0ed4b0f89f53254109bb71908fe67aded2
 __pycache__
 
+<<<<<<< HEAD
+=======
+# Coverage reports
+# htmlcov/
+# .coverage
+# .coverage.*
+# *,cover
+
+# # Direnv
+# .envrc
+# .direnv
+
+# .github/**
+# .venv
+>>>>>>> 6f339f0ed4b0f89f53254109bb71908fe67aded2

@@ -46,7 +46,11 @@ Parameters:
 
   CodeBuildDockerImage:
     Type: String
+<<<<<<< HEAD
     Default: aws/codebuild/standard:4.0
+=======
+    Default: aws/codebuild/docker:20.10.17
+>>>>>>> 6f339f0ed4b0f89f53254109bb71908fe67aded2
     Description: AWS CodeBuild Docker optimized image
     MinLength: 3
     MaxLength: 100
