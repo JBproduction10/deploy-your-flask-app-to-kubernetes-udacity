@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: flask-app-deployment
-          image: jbangala/project-4-flask-app-deployment
+          image: jbangala/myimage
           securityContext:
             privileged: false
             readOnlyRootFilesystem: false
