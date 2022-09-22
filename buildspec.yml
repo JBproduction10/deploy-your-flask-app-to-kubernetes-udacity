@@ -30,7 +30,6 @@ phases:
         - sed -i 's@CONTAINER_IMAGE@'"$REPOSITORY_URI:$TAG"'@' simple_jwt_api.yml
         - $(aws ecr get-login --no-include-email)
         - export KUBECONFIG=$HOME/.kube/config
-        - kubectl apply -f simple_jwt_api.yml
   build:
     commands:
       - docker build --tag $REPOSITORY_URI:$TAG .
@@ -39,8 +38,8 @@ phases:
     commands:
       - docker push $REPOSITORY_URI:$TAG
       - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --role-arn $EKS_KUBECTL_ROLE_ARN
-       
       - printf '[{"name":"simple_jwt_api","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
       - parameter-store:- printf '[{"name":"simple_jwt_api","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > $CODEBUILD_SRC_DIR/build.json
 artifacts:
-  files: **/*
+  files: 
+   - **/*
